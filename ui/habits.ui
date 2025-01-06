@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <requires lib="gtk" version="4.0" />
+    <object class="GtkBox" id="root">
+        <property name="orientation">vertical</property>
+        <property name="halign">center</property>
+        <property name="margin-top">12</property>
+        <property name="margin-start">12</property>
+        <property name="margin-end">12</property>
+        <!-- <property name="title" translatable="yes">Habits</property> -->
+        <!-- <property name="description" translatable="yes">Track habit progress</property> -->
+        <child>
+            <object class="AdwClamp" id="clamp">
+                <property name="maximum-size">600</property>
+                <child>
+                    <object class="GtkBox">
+                        <property name="orientation">1</property>
+                        <child>
+                            <object class="GtkCalendar" id="calendar">
+                                <property name="show-day-names">true</property>
+                                <property name="show-week-numbers">false</property>
+                                <property name="show-heading">true</property>
+                                <property name="margin-top">18</property>
+                                <property name="margin-bottom">18</property>
+                                <property name="day">1</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkScrolledWindow">
+                                <property name="margin-bottom">12</property>
+                                <!-- <property name="margin-top">24</property> -->
+                                <property name="has-frame">true</property>
+                                <property name="vexpand">false</property>
+                                <property name="propagate-natural-height">true</property>
+                                <property name="min-content-width">600</property>
+                                <property name="min-content-height">500</property>
+                                <property name="max-content-width">700</property>
+                                <property name="max-content-height">500</property>
+                                <property name="height-request">500</property>
+                                <child>
+                                    <object class="GtkListBox" id="listbox">
+                                        <property name="selection-mode">0</property>
+                                        <!-- <style>
+                                            <class name="boxed-list-separate" />
+                                        </style> -->
+                                        <style>
+                                            <class name="boxed-list" />
+                                        </style>
+                                        <!-- <child>
+                                            <object class="AdwActionRow">
+                                                <property name="title" translatable="yes">Action Row Can
+                                                    Have an Activatable Widget</property>
+                                                <property name="subtitle" translatable="yes">Click on the
+                                                    row to activate it</property>
+                                                <property name="activatable-widget">activatable_toggle</property>
+                                                <child type="suffix">
+                                                    <object class="GtkToggleButton" id="activatable_toggle">
+                                                        <property name="icon-name">list-add-symbolic</property>
+                                                        <property name="valign">3</property>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child> -->
+                                        <!-- <child>
+                                            <object class="GtkScrolledWindow">
+                                                <property name="propagate-natural-height">true</property>
+                                                <property name="has-frame">false</property>
+                                                <property name="height-request">300</property>
+                                                <child>
+                                                    <object class="GtkFlowBox" id="flowbox">
+                                                        <property name="orientation">0</property>
+                                                        <property name="row-spacing">6</property>
+                                                        <property name="column-spacing">6</property>
+                                                        <property name="homogeneous">true</property>
+                                                        <property name="max-children-per-line">6</property>
+                                                        <property name="min-children-per-line">3</property>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child> -->
+                                        <child>
+                                            <object class="AdwButtonRow" id="todayBtn">
+                                                <property name="title" translatable="yes">Today</property>
+                                                <property name="start-icon-name">view-refresh-symbolic</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+            </object>
+        </child>
+    </object>
+</interface>

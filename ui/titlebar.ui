@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <requires lib="gtk" version="4.0" />
+    <object class="AdwHeaderBar" id="titlebar">
+        <!-- <child type="start">
+            <object class="GtkMenuButton">
+                <property name="label" translatable="yes">Open</property>
+                <property name="menu-model">open_menu</property>
+            </object>
+        </child>
+        <child type="start">
+            <object class="GtkButton">
+                <property name="icon-name">tab-new-symbolic</property>
+            </object>
+        </child> -->
+        <child type="end">
+            <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
+                <property name="primary">true</property>
+                <property name="menu-model">window_menu</property>
+            </object>
+        </child>
+        <!-- <child type="end">
+            <object class="GtkButton">
+                <property name="icon-name">edit-find-symbolic</property>
+            </object>
+        </child> -->
+    </object>
+    <menu id="window_menu">
+        <section>
+            <!-- <item>
+                <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
+                <attribute name="action">app.shortcuts</attribute>
+            </item> -->
+            <item>
+                <attribute name="label" translatable="yes">About App</attribute>
+                <attribute name="action">app.about</attribute>
+            </item>
+        </section>
+    </menu>
+    <!-- <menu id="open_menu">
+        <section>
+            <item>
+                <attribute name="label" translatable="yes">Item 1</attribute>
+            </item>
+            <item>
+                <attribute name="label" translatable="yes">Item 2</attribute>
+            </item>
+            <item>
+                <attribute name="label" translatable="yes">Item 3</attribute>
+            </item>
+        </section>
+    </menu> -->
+</interface>

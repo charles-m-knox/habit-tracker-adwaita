@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <requires lib="gtk" version="4.0" />
+    <object class="AdwActionRow" id="{{ .HabitID }}">
+        <property name="title" translatable="yes">{{ .Habit.Name }}</property>
+        <!-- <property name="subtitle" translatable="yes">Foo</property> -->
+        <property name="activatable-widget">{{ .ToggleID }}</property>
+        <child type="suffix">
+            <object class="GtkToggleButton" id="{{ .ToggleID }}">
+                <property name="icon-name">process-stop-symbolic</property>
+                <property name="valign">3</property>
+            </object>
+        </child>
+    </object>
+    <object class="GtkLevelBar" id="{{ .ProgressID }}">
+        <property name="mode">1</property>
+        <property name="margin-start">50</property>
+        <property name="margin-end">50</property>
+        <property name="margin-top">10</property>
+        <property name="margin-bottom">10</property>
+        <property name="min-value">0</property>
+        <property name="max-value">14</property>
+        <property name="value">0</property>
+    </object>
+</interface>
